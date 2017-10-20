@@ -23,6 +23,10 @@ heroApp.config(function($stateProvider, $urlRouterProvider){
       url: "/dashboard",
       templateUrl: "partial-dashboard.html",
       controller: "dashboardController"
+    }).state("heroes", {
+      url: "/heroes",
+      templateUrl: "partial-heroes.html",
+      controller: "heroesController"
     });
 });
 
@@ -30,3 +34,6 @@ heroApp.controller('dashboardController', function($scope) {
   $scope.heroes = heroes.slice(1, 5);
 });
 
+heroApp.controller('heroesController', function($scope) {
+  $scope.heroes = heroes;
+});
