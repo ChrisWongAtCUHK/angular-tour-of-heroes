@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularTourOfHeroes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      h1 {
+        font-size: 1.2em;
+        color: #999;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 2em;
+        margin-top: 0;
+        padding-top: 0;
+      }
+      nav a {
+        padding: 5px 10px;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+        background-color: #eee;
+        border-radius: 4px;
+      }
+      nav a:visited, a:link {
+        color: #607D8B;
+      }
+      nav a:hover {
+        color: #039be5;
+        background-color: #CFD8DC;
+      }
+      nav a.active {
+        color: #039be5;
+      }
+    </style>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="//code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="app.js" ></script>
+</head>
+<body ng-app="heroApp">
+<h1 style="font-weight: bold">Tour of Heroes</h1>
+<nav>
+    <a ui-serf="dashboard">Dashboard</a>
+</nav>
+<div ui-view></div>
+
+</body>
+</html>
