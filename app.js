@@ -48,6 +48,10 @@ heroApp.config(function($stateProvider, $urlRouterProvider){
       url: "/heroes",
       templateUrl: "partial-heroes.html",
       controller: "heroesController"
+    }).state("detail", {
+      url: "/detail/:id",
+      templateUrl: "partial-hero-detail.html",
+      controller: "heroDetailController"
     });
 });
 
@@ -78,5 +82,13 @@ heroApp.controller('heroesController', function($scope) {
 
     // update localStorage
     setHeroes($scope.heroes);
+  }
+});
+
+heroApp.controller('heroDetailController', function($scope, $stateParams) {
+  var heroArray = getHeroes().filter(x => x.id == $stateParams.id); // there should be an array with 1 hero
+  if(heroArray.length == 1){
+    // if $scope.hero does not exist, ng-if would show nothing
+    $scope.hero = heroArray[0];
   }
 });
