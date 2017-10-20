@@ -62,9 +62,15 @@ button.delete {
   </button>
 </div>
 <ul class="heroes">
-  <li ng-repeat="hero in heroes">
+  <li ng-repeat="hero in heroes" ng-click="onSelect(hero)" ng-class="{ 'selected': hero === selectedHero }">
     <span class="badge">{{hero.id}}</span>
     <span>{{hero.name}}</span>
     <button class="delete" ng-click="delete(hero.id)">x</button>
   </li>
 </ul>
+<div ng-if="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button ng-click="gotoDetail()">View Details</button>
+</div>

@@ -62,6 +62,14 @@ heroApp.controller('dashboardController', function($scope) {
 heroApp.controller('heroesController', function($scope) {
   $scope.heroes = getHeroes();
 
+  $scope.onSelect = function(hero){
+    $scope.selectedHero = hero;
+  };
+
+  $scope.gotoDetail = function(){
+
+  };
+
   $scope.add = function(){
     // add hero 
     var newId = $scope.heroes
