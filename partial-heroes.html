@@ -61,6 +61,6 @@ button.delete {
   <li ng-repeat="hero in heroes">
     <span class="badge">{{hero.id}}</span>
     <span>{{hero.name}}</span>
-    <button class="delete">x</button>
+    <button class="delete" ng-click="delete(hero.id)">x</button>
   </li>
 </ul>
