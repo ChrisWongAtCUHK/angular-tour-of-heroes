@@ -1,7 +1,14 @@
 var heroApp = angular.module("heroApp", ["ui.router"]);
 
 /*
- * Merge the dummy data with localStorage
+ * Set heroes in localStorage
+ */
+function setHeroes(heroes){
+  localStorage.setItem("heroes", JSON.stringify(heroes));
+}
+
+/*
+ * Get heroes from localStorage
  */
 function getHeroes(){
   // dummy data, if there is data in localStorage, merge them
@@ -21,7 +28,7 @@ function getHeroes(){
 
   var heroesLs = localStorage.getItem("heroes");
   if(!heroesLs){
-    localStorage.setItem("heroes", JSON.stringify(heroes));
+    setHeroes(heroes);
   } else {
     return JSON.parse(heroesLs);
   }
@@ -51,11 +58,25 @@ heroApp.controller('dashboardController', function($scope) {
 heroApp.controller('heroesController', function($scope) {
   $scope.heroes = getHeroes();
 
+  $scope.add = function(){
+    // add hero 
+    var newId = $scope.heroes
+                  .map(x => x.id)                       // map heroes array to in array
+                  .reduce((a, b) => Math.max(a,b)) + 1; // get the max in the int array, than add by 1
+    $scope.heroes.push({id: newId, name: $scope.heroName});
+
+    // update localStorage
+    setHeroes($scope.heroes);
+
+    // empty the textbox
+    $scope.heroName = "";
+  }
+
   $scope.delete = function(id){
     // delete hero by id
     $scope.heroes = $scope.heroes.filter(hero => hero.id !== id);
 
     // update localStorage
-    localStorage.setItem("heroes", JSON.stringify($scope.heroes));
+    setHeroes($scope.heroes);
   }
 });
