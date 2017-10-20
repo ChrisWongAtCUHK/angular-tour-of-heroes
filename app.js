@@ -59,7 +59,7 @@ heroApp.controller('dashboardController', function($scope) {
   $scope.heroes = getHeroes().slice(1, 5);
 });
 
-heroApp.controller('heroesController', function($scope) {
+heroApp.controller('heroesController', function($scope, $state) {
   $scope.heroes = getHeroes();
 
   $scope.onSelect = function(hero){
@@ -67,7 +67,7 @@ heroApp.controller('heroesController', function($scope) {
   };
 
   $scope.gotoDetail = function(){
-
+    $state.go("detail", { id: $scope.selectedHero.id });
   };
 
   $scope.add = function(){
@@ -93,10 +93,32 @@ heroApp.controller('heroesController', function($scope) {
   }
 });
 
-heroApp.controller('heroDetailController', function($scope, $stateParams) {
+heroApp.controller('heroDetailController', function($scope, $state, $stateParams) {
   var heroArray = getHeroes().filter(x => x.id == $stateParams.id); // there should be an array with 1 hero
   if(heroArray.length == 1){
     // if $scope.hero does not exist, ng-if would show nothing
     $scope.hero = heroArray[0];
   }
+
+  $scope.goBack = function(){
+    // go back to previous page
+    history.back();
+  };
+  
+  $scope.save = function(){
+    var heroes = getHeroes();
+    for(var hero of heroes){
+      if(hero.id == $scope.hero.id){
+        // update the hero
+        hero.name = $scope.hero.name;
+        break;
+      }
+    }
+
+    // update localStorage
+    setHeroes(heroes);
+
+    // go back to previous page
+    history.back();
+  };
 });
