@@ -60,6 +60,26 @@ h4 {
     min-width: 60px;
   }
 }
+.search-result{
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  width: 200px;
+  height: 29px;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search-result:hover {
+  color: #eee;
+  background-color: #607D8B;
+}
+
+#search-box{
+  width: 200px;
+  height: 20px;
+}
 </style>
 <h3>Top Heroes</h3>
 <div class="grid grid-pad">
@@ -68,4 +88,13 @@ h4 {
       <h4>{{hero.name}}</h4>
     </div>
   </a>
+</div>
+<div id="search-component">
+  <h4>Hero Search</h4>
+  <input id="search-box" ng-model="heroName" ng-keyup="search()" />
+  <div>
+    <div ng-repeat="hero in searchResult" class="search-result" >
+    	{{hero.name}}
+    </div>
+  </div>
 </div>

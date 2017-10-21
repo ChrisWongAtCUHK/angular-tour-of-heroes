@@ -57,6 +57,15 @@ heroApp.config(function($stateProvider, $urlRouterProvider){
 
 heroApp.controller('dashboardController', function($scope) {
   $scope.heroes = getHeroes().slice(1, 5);
+  $scope.search = function(){
+    if($scope.heroName.trim()){
+      var searchResult = getHeroes().filter(hero => 
+        hero.name.toUpperCase().indexOf($scope.heroName.toUpperCase()) > -1);
+      $scope.searchResult = searchResult;
+    } else {
+      $scope.searchResult = [];
+    }
+  };
 });
 
 heroApp.controller('heroesController', function($scope, $state) {
@@ -104,7 +113,7 @@ heroApp.controller('heroDetailController', function($scope, $state, $stateParams
     // go back to previous page
     history.back();
   };
-  
+
   $scope.save = function(){
     var heroes = getHeroes();
     for(var hero of heroes){
