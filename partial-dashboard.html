@@ -93,7 +93,7 @@ h4 {
   <h4>Hero Search</h4>
   <input id="search-box" ng-model="heroName" ng-keyup="search()" />
   <div>
-    <div ng-repeat="hero in searchResult" class="search-result" >
+    <div ng-repeat="hero in searchResult" class="search-result" ng-click="gotoDetail(hero.id)">
     	{{hero.name}}
     </div>
   </div>

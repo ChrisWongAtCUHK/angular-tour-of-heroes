@@ -55,7 +55,7 @@ heroApp.config(function($stateProvider, $urlRouterProvider){
     });
 });
 
-heroApp.controller('dashboardController', function($scope) {
+heroApp.controller('dashboardController', function($scope, $state) {
   $scope.heroes = getHeroes().slice(1, 5);
   $scope.search = function(){
     if($scope.heroName.trim()){
@@ -65,6 +65,10 @@ heroApp.controller('dashboardController', function($scope) {
     } else {
       $scope.searchResult = [];
     }
+  };
+
+  $scope.gotoDetail = function(heroId){
+    $state.go("detail", { id: heroId });
   };
 });
 
