@@ -71,7 +71,10 @@ ng generate component heroes
 - [Create a Hero interface](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#create-a-hero-interface)
 - [Format with the UppercasePipe](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#format-with-the-uppercasepipe)
 - [Edit the hero](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#edit-the-hero)
+- [Display a selection list](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt2)
 
+## [Learn Angular](https://angular.dev/tutorials/learn-angular/1-components-in-angular)
+- [Control Flow in Components - @for](https://angular.dev/tutorials/learn-angular/5-control-flow-for)
 ## [Easy Steps to Host an Angular App in GitHub Pages](https://www.syncfusion.com/blogs/post/host-angular-app-in-github-pages)
 ```
 ng add angular-cli-ghpages
