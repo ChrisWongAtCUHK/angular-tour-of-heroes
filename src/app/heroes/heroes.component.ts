@@ -7,6 +7,8 @@ import { HEROES } from '../mock-heroes';
 
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
+import { HeroService } from '../hero.service';
+
 @Component({
   standalone: true,
   selector: 'app-heroes',
@@ -18,7 +20,17 @@ export class HeroesComponent {
   heroes = HEROES;
   selectedHero?: Hero;
 
+  constructor(private heroService: HeroService) {}
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+  }
+
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
   }
 }
