@@ -5,6 +5,7 @@ import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-dashboard',
+  imports: [NgFor],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
