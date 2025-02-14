@@ -59,16 +59,18 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 ## [Tutorial: Tour of Heroes](https://v17.angular.io/tutorial/tour-of-heroes)
-- [Create a new workspace and an initial application](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt0#create-a-new-workspace-and-an-initial-application)
+### [Create a new workspace and an initial application](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt0#create-a-new-workspace-and-an-initial-application)
 ```
 ng new angular-tour-of-heroes
 ```
+### [The hero editor](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#the-hero-editor)
 - [Create the heroes component](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#create-the-heroes-component)
 ```
 ng generate component heroes
 ```
 - [Create a Hero interface](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#create-a-hero-interface)
 - [Format with the UppercasePipe](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#format-with-the-uppercasepipe)
+- [Edit the hero](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#edit-the-hero)
 
 ## [Easy Steps to Host an Angular App in GitHub Pages](https://www.syncfusion.com/blogs/post/host-angular-app-in-github-pages)
 ```
