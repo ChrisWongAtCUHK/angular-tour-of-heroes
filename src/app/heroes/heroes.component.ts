@@ -8,6 +8,7 @@ import { HEROES } from '../mock-heroes';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
 import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   standalone: true,
@@ -20,7 +21,7 @@ export class HeroesComponent {
   heroes = HEROES;
   selectedHero?: Hero;
 
-  constructor(private heroService: HeroService) {}
+  constructor(private heroService: HeroService, private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.getHeroes();
@@ -28,9 +29,10 @@ export class HeroesComponent {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
   }
 }
