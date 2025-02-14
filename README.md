@@ -62,10 +62,13 @@ For more information on using the Angular CLI, including detailed command refere
 ```
 ng new angular-tour-of-heroes
 ```
+## [Create the heroes component](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#create-the-heroes-component)
+```
+ng generate component heroes
+```
 
 ## [Easy Steps to Host an Angular App in GitHub Pages](https://www.syncfusion.com/blogs/post/host-angular-app-in-github-pages)
 ```
 ng add angular-cli-ghpages
 ng deploy --base-href=/angular-tour-of-heroes/
 ```
-
