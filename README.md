@@ -68,6 +68,7 @@ ng new angular-tour-of-heroes
 ng generate component heroes
 ```
 - [Create a Hero interface](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#create-a-hero-interface)
+- [Format with the UppercasePipe](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt1#format-with-the-uppercasepipe)
 
 ## [Easy Steps to Host an Angular App in GitHub Pages](https://www.syncfusion.com/blogs/post/host-angular-app-in-github-pages)
 ```
