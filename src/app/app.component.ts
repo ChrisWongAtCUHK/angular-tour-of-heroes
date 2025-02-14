@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { MessagesComponent } from './messages/messages.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MessagesComponent],
+  imports: [RouterOutlet, RouterLink, MessagesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
