@@ -74,6 +74,7 @@ ng generate component heroes
 - [Display a selection list](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt2)
 - [Create a feature component](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt3#create-a-feature-component)
 - [Add services](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt4#add-services)
+- [Add navigation with routing](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt5#add-navigation-with-routing)
 
 ## [Learn Angular](https://angular.dev/tutorials/learn-angular/1-components-in-angular)
 - [Control Flow in Components - @for](https://angular.dev/tutorials/learn-angular/5-control-flow-for)
