@@ -78,6 +78,7 @@ ng generate component heroes
   - [Add a navigation link using routerLink](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt5#add-a-navigation-link-using-routerlink)
   - [Add a dashboard view](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt5#add-a-dashboard-view)
   - [Navigating to hero details](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt5#navigating-to-hero-details)
+  - [Get data from a server](https://v17.angular.io/tutorial/tour-of-heroes/toh-pt6)
 
 ## [Learn Angular](https://angular.dev/tutorials/learn-angular/1-components-in-angular)
 - [Control Flow in Components - @for](https://angular.dev/tutorials/learn-angular/5-control-flow-for)
