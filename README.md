@@ -86,3 +86,20 @@ ng generate component heroes
 ng add angular-cli-ghpages
 ng deploy --base-href=/angular-tour-of-heroes/
 ```
+## [How to make latest Angular versions compatible with old Browsers?](https://stackoverflow.com/questions/78341952/how-to-make-latest-angular-versions-compatible-with-old-browsers)
+1. Generate the .browserslist if it is not generated Using the following command:
+```
+ng g config browserslist
+```
+2. Insert the list of browsers in this file:
+```
+Chrome >=99
+Firefox >=99
+Safari>=13
+iOS >=13
+```
+3. Edit the tsconfig.json file
+```
+"target": "es5"
+
+```
